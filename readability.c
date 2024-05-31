@@ -1,11 +1,11 @@
-//code is unable to take input atm
+//problem: code takes input but doesn't run properly
 #include <stdio.h>
 #include <ctype.h>
 int avg_letters(char input[]);
 int avg_sentence(char input[]);
 int main(void){
     //input text
-    char text[50];
+    char text[500]; //may vary for different i/p
     printf("Enter paragraph:\n");
     scanf("%s",text);
     //calculate and print readability
@@ -44,6 +44,7 @@ int avg_letters(char input[]){
             wc=0;
         }
     }
+    letcnt[j]=templ;
     int sum=0; //for avg
     for(int k=0; k<=j; k++){
         sum+=letcnt[k];
@@ -75,6 +76,7 @@ int avg_sentence(char input[]){
             wc=0;
         }
     }
+    sencnt[j]=temps;
     int sum=0; //for avg
     for(int k=0; k<=j; k++){
         sum+=sencnt[k];
