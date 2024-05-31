@@ -35,6 +35,7 @@ int avg_letters(char input[]){
             else if((input[i]>65 && input[i]<90) || (input[i]>97 && input[i]<122)){
                 templ++; //letter count
             }
+            i++;
         }
         //reset no of letters every 100 words so we can analyse whole text
         if (wc==100){
@@ -67,6 +68,7 @@ int avg_sentence(char input[]){
             else if(input[i]=='.'){
                 temps++; //sentence count
             }
+            i++;
         }
         //reset no of sentences every 100 words so we can analyse whole text
         if (wc==100){
